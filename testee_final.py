@@ -2,22 +2,21 @@
 from conta import Conta, Poupanca
 from EditandoValor import change_string_in_file
 
-agencia = {
-    'contas correntes': [],
-    'poupanças': []
-}
 
 while True:
     print('Serviços disponíveis no momento: ')
     print(' Abrir Conta \n Deposito \n Saque \n Fechar conta \n')
     print('Para sair: stop  \n')
         
-    servico = input('Qual tipo de serviço deseja? ').lower()
+    servico = input('Qual tipo de serviço deseja? ')
     # Estava dando problema na avaliacao do if quando
     # colocava o .lower() na mesma linha do input
-    # servico = servico.lower()
+    servico = servico.lower()
+    print(servico.split())
+    
     if servico == 'stop':
-        break
+       break
+ 
     titular = input('Digite o nome do titular: ').lower()
     numero = input('Digite o número da conta: ')
     tipo = input('Qual o tipo de conta: \n Conta \n Poupanca ').lower()
@@ -34,7 +33,7 @@ while True:
 
         change_string_in_file(filename = 'agencia.txt', string_to_search = dados, servico = servico, valor = valor)
 
-    if servico == 'fechar':
+    elif servico == 'fechar':
         with open ('agencia.txt', 'r') as read_obj:
             for line in read_obj:
                 if dados in line:
@@ -44,14 +43,19 @@ while True:
                     filedata = f.read()
                     f.close()
 
-                    newdata = filedata.replace(old_string, '\n')
+                    newdata = filedata.replace(old_string, '')
                     
                     print('Salvando arquivo \n')
+                    print(newdata + '\n')
                     f = open(filename, 'w')
                     f.write(newdata)
                     f.close()
                     print(newdata + '\n')
-    else:
+                else:
+                    print(ValueError('Conta não encontrada nessa agência, tente novamente '))
+                    continue
+                    
+    elif servico == 'abrir':
         saldo_inicial = float(input('Qual o valor de deposito inicial: '))
         c = str(' \nTitular: {}, Número: {}, Saldo: {}'.format(titular, numero, saldo_inicial))
         if tipo == 'conta':
@@ -69,16 +73,20 @@ while True:
                     f = open(filename, 'r')
                     filedata = f.read()
                     f.close()
-                    print(tipo_de_conta)
+                    
                     new_string = old_string + c
 
                     newdata = filedata.replace(old_string, new_string)
-                    print(newdata)
-                    #print('Salvando arquivo \n')
+                    # print(newdata + '\n')
+                    print('Salvando nova conta')
                     f = open(filename, 'w')
                     f.write(newdata)
                     f.close()
                     
                     print(new_string)
         #print(new_string)
-print(dados)
+    else:
+        print(ValueError('Esta operação não está disponível no momento \n'))
+        continue
+        
+print('Usuário desejou sair do terminal')
