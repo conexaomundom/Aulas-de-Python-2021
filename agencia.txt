@@ -1,1 +1,9 @@
-Titular: regina, Número: 8965, Saldo: 6000.0
+contas correntes
+Titular: marina, Número: 1234, Saldo: 6000.0
+Titular: regina, Número: 4561, Saldo: 9000.0
+#########################################
+poupanças 
+
+Titular: lucas, Número: 4561, Saldo: 1000.0
+Titular: mara, Número: 8784, Saldo: 6900.0 
+#########################################
