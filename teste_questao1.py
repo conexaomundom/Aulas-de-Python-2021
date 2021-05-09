@@ -29,7 +29,7 @@ while True:
     if tipo == 'conta':
         tipo_de_conta = 'contas correntes'
     elif tipo == 'poupanca':
-        tipo_de_conta = 'poupancas'
+        tipo_de_conta = 'poupanças'
     else:
         raise ValueError('Tipo de conta desconhecido')
         print()
@@ -39,4 +39,4 @@ while True:
     with open ('agencia.txt', 'r') as read_obj:
         for line in read_obj:
             if tipo_de_conta in line:
-                print(tipo_de_conta)
+                

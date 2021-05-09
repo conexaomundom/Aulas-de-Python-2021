@@ -1,9 +1,13 @@
-contas correntes
-Titular: marina, Número: 1234, Saldo: 6000.0
+contas correntes 
+Titular: josé, Número: 3333, Saldo: 4000.0 
+Titular: paulo, Número: 4321, Saldo: 500.0 
+Titular: 4444, Número: 4444, Saldo: 200.0 
+Titular: carlos, Número: 7777, Saldo: 5000.0
 Titular: regina, Número: 4561, Saldo: 9000.0
 #########################################
 poupanças 
-
+Titular: manuel, Número: 1234, Saldo: 6000.0 
+Titular: rui, Número: 3652, Saldo: 1000.0 
 Titular: lucas, Número: 4561, Saldo: 1000.0
 Titular: mara, Número: 8784, Saldo: 6900.0 
 #########################################

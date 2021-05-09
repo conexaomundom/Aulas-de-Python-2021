@@ -45,14 +45,16 @@ while True:
 
         print('Arquivo salvo')
 
-    if servico == 'deposito'
-        if tipo == 'conta'
-           with open('agencia.txt', 'w'):
-                for tipo_de_conta in agencia:
-                arquivo.write(tipo_de_conta + '\n')
-                for conta in agencia[tipo_de_conta]:
-                    arquivo.write(str(conta))
-                    arquivo.write('\n')
-                arquivo.write('#########################################')
-                arquivo.write('\n')
-            
+  #  if servico == 'deposito'
+   #     valor_dep = float(input('Qual valor deseja depositar: ')):
+    #    if tipo == 'conta'
+     #       open('agencia.txt', 'w'):
+      #      for conta in agencia:
+       #         arquivo.write(tipo_de_conta + '\n')
+        #        for conta in agencia[saldo_inicial]:
+         #           arquivo.write(c.deposito(valor_dep))
+
+
+    # Quando for fechar a conta
+    # import os
+    # os.remove("demofile.txt")

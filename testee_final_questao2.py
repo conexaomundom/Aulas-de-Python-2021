@@ -56,10 +56,45 @@ while True:
                     continue
                     
     elif servico == 'abrir':
-        saldo_inicial = float(input('Qual o valor de deposito inicial: '))
+        saldo_inicial = input('Qual o valor de deposito inicial: ')
         
+        #if saldo_inicial > 1:
+         #   print('Valor inválido para saldo inicial, digite valor único')
+          #  continue
+        while True:
+           
+            try:
+                if ',' in saldo_inicial:
+                    print('Valor inválido, virgula no lugar do ponto')
+                    saldo_inicial = saldo_inicial.replace(',','.')
+                    print('1111')
+                    saldo_inicial = float(saldo_inicial)
+                    print((saldo_inicial > 0))
+                    if float == type(saldo_inicial) and saldo_inicial > 0:
+                        print('4444')
+                        break
+                    
+                if float(saldo_inicial) < 0:
+                    print('3333')
+                    print('Valor inválido, valor negativo foi inserido')
+                    saldo_inicial = input('Qual o valor de deposito inicial: ')
+                    saldo_inicial = float(saldo_inicial)
+                    if float == type(saldo_inicial) and saldo_inicial > 0:
+                        break
+                
+            except:
+                if float == type(saldo_inicial):
+                    if saldo_inicial > 0:
+                        break
+                else:
+                    print('Valor inválido')
+                    saldo_inicial = input('Qual o valor de deposito inicial: ')
+                    #saldo_inicial = float(saldo_inicial)
+    
         
+        saldo_inicial == float(saldo_inicial)
         c = str(' \nTitular: {}, Número: {}, Saldo: {}'.format(titular, numero, saldo_inicial))
+
         if tipo == 'conta':
             tipo_de_conta = 'contas correntes'
         elif tipo == 'poupanca':
