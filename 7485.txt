@@ -1,0 +1,7 @@
+contas correntes 
+Titular: mane, Número: 9658, Saldo: 9000.0
+Titular: m, Número: 4444, Saldo: 400.0
+#########################################
+poupanças 
+Titular: ma, Número: 7854, Saldo: 500.0
+#########################################
