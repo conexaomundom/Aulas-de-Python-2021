@@ -1,5 +1,5 @@
 contas correntes
+Titular: maria, Número: 1234, Saldo: 0.0
 #########################################
 poupanças
-Titular: m, Número: 7, Saldo: 0.0
 #########################################

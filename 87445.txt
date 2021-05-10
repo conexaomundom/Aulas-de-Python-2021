@@ -1,0 +1,7 @@
+contas correntes
+Titular: maneu, Número: poupanca, Saldo: 500.0
+Titular: ma, Número: 4, Saldo: 0.0
+#########################################
+poupanças
+Titular: maneu, Número: 5555, Saldo: 931025.0
+#########################################
