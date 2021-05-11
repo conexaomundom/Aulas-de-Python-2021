@@ -1,5 +1,6 @@
 # Todos os servicos
-from EditandoValor import change_string_in_file
+# from EditandoValor import change_string_in_file
+import os
 
 class Conta:
     def __init__(self, titular, numero, tipo, saldo_inicial=0.0):
@@ -102,7 +103,7 @@ class Agencia(Conta):
             tipo_de_conta = 'poupanças'
         else:
             raise ValueError('Tipo de conta desconhecido')
-        print('11111')
+        
         with open (filename, 'r') as read_obj:
             for line in read_obj:
                 if tipo_de_conta in line:
@@ -182,3 +183,19 @@ class Agencia(Conta):
                     
                     return  print(newdata)
         return ValueError('Esta conta não está cadastrada no banco')
+
+
+    def todas_agencias(diretorio):
+        os.listdir(diretorio)
+        for i in diretorio:
+            f = open(i, 'r')
+            filedata = f.read()
+            f.close()
+            print(filedata)
+
+            
+
+
+
+            
+    

@@ -1,0 +1,7 @@
+contas correntes
+Titular: lucelio, Número: 4321, Saldo: 736.21
+Titular: gisele, Número: 4321, Saldo: 7.3
+#########################################
+poupanças
+Titular: hugo, Número: 1234, Saldo: 0.0 
+#########################################

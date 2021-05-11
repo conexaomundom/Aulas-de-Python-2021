@@ -1,7 +1,7 @@
 # Todos os servicos
 #from conta import Conta, Poupanca
 from main5 import Agencia
-#from main5 import criar
+import os
 
 extrato = { }
 
@@ -69,15 +69,15 @@ while True:
 
             try:
                 if ',' in saldo_inicial:
-                    print('Valor inválido, virgula no lugar do ponto')
+                    #print('Valor inválido, virgula no lugar do ponto')
                     saldo_inicial = saldo_inicial.replace(',','.')
-                    saldo_inicial = float(self.saldo_inicial)
-                    print((saldo_inicial > 0))
+                    saldo_inicial = float(saldo_inicial)
+                    #print((saldo_inicial > 0))
                     if float == type(saldo_inicial) and saldo_inicial > 0:
                         break
                     
                 if float(saldo_inicial) < 0:
-                    print('Valor inválido, valor negativo foi inserido')
+                    #print('Valor inválido, valor negativo foi inserido')
                     saldo_inicial = input('Qual o valor de deposito inicial: ')
                     saldo_inicial = float(saldo_inicial)
                     if float == type(saldo_inicial) and saldo_inicial > 0:
@@ -99,11 +99,11 @@ while True:
         # Conta já existente
         else:
             Agencia(titular, numero, tipo, saldo_inicial).existente(filename)
-
-
-
+            
     else:
         print(ValueError('Esta operação não está disponível no momento \n'))
         continue
-        
+
+diretorio = str(input('Digite qual diretório se encontra esse arquivo: \n'))
+print(os.listdir(diretorio))  
 print('Usuário desejou sair do terminal')
